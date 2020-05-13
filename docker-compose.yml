@@ -28,9 +28,11 @@ services:
   filebeat:
     image: docker.elastic.co/beats/filebeat:${TAG}
     volumes: 
+      # mount the configuration
       - "./configs/filebeat.yml:/usr/share/filebeat/filebeat.yml"
       # needed to persist filebeat tracking data :
-      - "./data/filebeat/:/usr/share/filebeat/data:rw"      
+      - "./data/filebeat/:/usr/share/filebeat/data:rw"
+      # this is the file which is monitored and harvested
       - "./logs/app.log:/var/log/sample/app.log:ro"
     depends_on:
       - elasticsearch
