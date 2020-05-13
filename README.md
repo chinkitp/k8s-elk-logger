@@ -31,3 +31,7 @@ $ curl -X GET "localhost:9200/filebeat*/_count?pretty"
 
 http://localhost:5601/app/kibana#/management/elasticsearch/index_management/
 
+## References 
+- https://logz.io/blog/a-practical-guide-to-kubernetes-logging/
+- https://mostafa-asg.github.io/post/ship-app-logs-to-elasticsearch-elk-filebeat/
+- https://github.com/cosminseceleanu/tutorials/blob/master/docker-logs-elk/docs/index.md
